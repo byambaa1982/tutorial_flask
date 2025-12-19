@@ -37,3 +37,7 @@ instance/
 # OS
 .DS_Store
 Thumbs.db
+
+# Instructor materials (keep local only)
+INSTRUCTOR_GUIDE_*.md
+TUTORIAL_PLAN.md
