@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database Statistics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Database Statistics</h1>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Students</h3>
+                <p class="stat-number">{{ total_students }}</p>
+            </div>
+            
+            <div class="stat-card">
+                <h3>Average Age</h3>
+                <p class="stat-number">{{ "%.1f"|format(avg_age) }} years</p>
+            </div>
+        </div>
+        
+        <h2>Students by Favorite Subject</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Number of Students</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for subject in subjects %}
+                <tr>
+                    <td>{{ subject['favorite_subject'] }}</td>
+                    <td>{{ subject['count'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <h2>Students by Grade</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Grade</th>
+                    <th>Number of Students</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for grade in grades %}
+                <tr>
+                    <td>{{ grade['grade'] }}</td>
+                    <td>{{ grade['count'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <p><a href="{{ url_for('students_list') }}" class="back-link">← Back to Students List</a></p>
+    </div>
+</body>
+</html>
