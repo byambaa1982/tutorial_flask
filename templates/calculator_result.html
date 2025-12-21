@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator Result</title>
+</head>
+<body>
+    <h1>Calculator Result 🎯</h1>
+    
+    <p><b>{{ num1 }}</b> 
+    {% if operation == 'add' %}+{% endif %}
+    {% if operation == 'subtract' %}-{% endif %}
+    {% if operation == 'multiply' %}×{% endif %}
+    {% if operation == 'divide' %}÷{% endif %}
+    <b>{{ num2 }}</b> = <b>{{ result }}</b></p>
+    
+    <br>
+    <a href="/calculator">Calculate Again</a> | 
+    <a href="/">← Back to Home</a>
+</body>
+</html>

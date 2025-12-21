@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Simple Calculator 🔢</h1>
+    
+    <form method="POST">
+        <label for="number1">First Number:</label>
+        <input type="number" id="number1" name="number1" step="any" required>
+        <br><br>
+        
+        <label for="operation">Operation:</label>
+        <select id="operation" name="operation" required>
+            <option value="add">Add (+)</option>
+            <option value="subtract">Subtract (-)</option>
+            <option value="multiply">Multiply (×)</option>
+            <option value="divide">Divide (÷)</option>
+        </select>
+        <br><br>
+        
+        <label for="number2">Second Number:</label>
+        <input type="number" id="number2" name="number2" step="any" required>
+        <br><br>
+        
+        <button type="submit">Calculate!</button>
+    </form>
+    
+    <br>
+    <a href="/">← Back to Home</a>
+</body>
+</html>

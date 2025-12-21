@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Results</title>
+</head>
+<body>
+    <h1>Thanks for the Survey, {{ name }}! 🎉</h1>
+    
+    <h2>Here's what you told us:</h2>
+    
+    <p><b>Your Name:</b> {{ name }}</p>
+    <p><b>Favorite Color:</b> {{ color }}</p>
+    <p><b>Favorite Food:</b> {{ food }}</p>
+    
+    <p><b>Your Hobbies:</b></p>
+    {% if hobbies %}
+        <ul>
+            {% for hobby in hobbies %}
+                <li>{{ hobby }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>You didn't select any hobbies!</p>
+    {% endif %}
+    
+    <br>
+    <a href="/survey">Take Survey Again</a> | 
+    <a href="/">← Back to Home</a>
+</body>
+</html>
