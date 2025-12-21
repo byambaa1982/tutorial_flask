@@ -2,9 +2,11 @@
 <html>
 <head>
     <title>Survey Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>Thanks for the Survey, {{ name }}! 🎉</h1>
+    <div class="container">
+        <h1>Thanks for the Survey, {{ name }}! 🎉</h1>
     
     <h2>Here's what you told us:</h2>
     
@@ -25,6 +27,7 @@
     
     <br>
     <a href="/survey">Take Survey Again</a> | 
-    <a href="/">← Back to Home</a>
+    <a href="/" class="back-link">← Back to Home</a>
+    </div>
 </body>
 </html>

@@ -2,9 +2,11 @@
 <html>
 <head>
     <title>Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>Simple Calculator 🔢</h1>
+    <div class="container">
+        <h1>Simple Calculator 🔢</h1>
     
     <form method="POST">
         <label for="number1">First Number:</label>
@@ -28,6 +30,7 @@
     </form>
     
     <br>
-    <a href="/">← Back to Home</a>
+    <a href="/" class="back-link">← Back to Home</a>
+    </div>
 </body>
 </html>

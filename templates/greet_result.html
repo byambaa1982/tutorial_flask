@@ -2,14 +2,17 @@
 <html>
 <head>
     <title>Hello!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>Hello, {{ user_name }}! 🎉</h1>
+    <div class="container">
+        <h1>Hello, {{ user_name }}! 🎉</h1>
     
     <p>Nice to meet you, {{ user_name }}!</p>
     
     <br>
     <a href="/greet">Greet Someone Else</a> | 
-    <a href="/">← Back to Home</a>
+    <a href="/" class="back-link">← Back to Home</a>
+    </div>
 </body>
 </html>

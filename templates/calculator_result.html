@@ -2,9 +2,11 @@
 <html>
 <head>
     <title>Calculator Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>Calculator Result 🎯</h1>
+    <div class="container">
+        <h1>Calculator Result 🎯</h1>
     
     <p><b>{{ num1 }}</b> 
     {% if operation == 'add' %}+{% endif %}
@@ -15,6 +17,7 @@
     
     <br>
     <a href="/calculator">Calculate Again</a> | 
-    <a href="/">← Back to Home</a>
+    <a href="/" class="back-link">← Back to Home</a>
+    </div>
 </body>
 </html>

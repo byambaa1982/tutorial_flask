@@ -2,9 +2,11 @@
 <html>
 <head>
     <title>Fun Survey</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>Fun Survey! 📋</h1>
+    <div class="container">
+        <h1>Fun Survey! 📋</h1>
     
     <form method="POST">
         <label for="name">Your Name:</label>
@@ -40,6 +42,7 @@
     </form>
     
     <br>
-    <a href="/">← Back to Home</a>
+    <a href="/" class="back-link">← Back to Home</a>
+    </div>
 </body>
 </html>
